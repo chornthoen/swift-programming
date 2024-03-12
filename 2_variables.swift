@@ -6,9 +6,9 @@
 //var is variable can change value
 
 let name = "Alice"
-// name = "Bob" --> error can't change value
+// name = "Bob" <--> error can't change value
 var numVar = 10
-numVar = 20 // --> ok can change value
+numVar = 20 // <--> ok can change value
 
 print("Hello, \(name)!")
 print("num = \(numVar)")

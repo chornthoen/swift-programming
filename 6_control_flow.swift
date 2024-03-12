@@ -1,5 +1,22 @@
 
 //control flow
+//if statement
+let isStudent = false
+var highOne = 100
+var highTwo = 200
+
+
+if isStudent{
+    print("Student is false")
+} else{
+    print("Student is true")
+}
+if highOne < highTwo {
+    print("This is high one")
+} else{
+    print("This is high two")    
+}
+
 
 //for loop
 print("--------------------------------------------------------")

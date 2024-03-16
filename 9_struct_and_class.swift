@@ -1,8 +1,11 @@
 // Type: Struct and Class
 //class or base class
 class Person{
+    //properties
     var name: String;
     var age: Int;
+
+    //init is a constructor with parameter
     init(name: String, age: Int){
         self.name = name
         self.age = age
@@ -20,13 +23,15 @@ class Person{
     static func printInfoStatic(){
         print("This is a static method")
     }
+    //instance method
     func printInfoInstance(){
         print("This is an instance method")
     }
 }
 
+var person = Person(name:"Chorn Thoen",age:20)
 
-// derived class student
+// derived class student from base class person 
 class Student : Person{
     //properties
     var school: String;
@@ -46,6 +51,7 @@ class Student : Person{
 
     }
 
+    //override method from base class
     override func printInfoBase(){
         super.printInfoBase()
         print("Name: \(name), Age: \(age), School: \(school) year: \(year)")
@@ -67,12 +73,16 @@ class Student : Person{
 //--------------------------------------------------------------
 //getter and setter
 class SupperClass{
+
+    //properties
     var numeber: Int = 0
 }
 
+//sub class from supper class
 class SubClass: SupperClass{
     var name: String = "Thoen"
 
+    //override the property
     override var numeber: Int{
         get{
             return super.numeber + 10
@@ -88,7 +98,6 @@ class SubClass: SupperClass{
     
 }
 
-//getter and setter
 // var subClass = SubClass()
 // subClass.printInfo() //Name: Thoen, Number: 10
 
@@ -114,6 +123,9 @@ class TempClass{
 //failible initializer
 class FailibelClass{
     var num: Int
+    
+
+    //init? is a failible constructor
     init?(num: Int){
         if num < 0{
             return nil
@@ -133,21 +145,30 @@ class FailibelClass{
 //-------------------------------------------------------------------
 //required initializer
 class RequiredClass{
+    //properties
     var num: Int
+
+    //init is a constructor
     required init(num: Int){
         self.num = num
     }
 }
 
 class SubRequired : RequiredClass{
+
+    //properties
     var name: String
+
+    //init is a constructor
     init(num: Int, name: String){
-        self.name = name
-        super.init(num: num)
+        self.name = name //initialize the name property
+        super.init(num: num) //call the base class constructor
     }
+
+    //required init
     required init(num: Int){
-        self.name = "Thoen"
-        super.init(num: num)
+        self.name = "Thoen" //initialize the name property
+        super.init(num: num) //call the base class constructor
     }
 }
 
@@ -165,7 +186,7 @@ class MyClasses{
 }
 
 var myClasses = MyClasses()
-print(myClasses.myFeild) //10
+// print(myClasses.myFeild) //10
 
 //--------------------------------------------------------------
 

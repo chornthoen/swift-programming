@@ -1,5 +1,5 @@
 // Type: Struct and Class
-//base class person
+//class or base class
 class Person{
     var name: String;
     var age: Int;
@@ -52,6 +52,19 @@ class Student : Person{
     }
 
 }
+
+
+// var person = Person(name:"Chorn Thoen",age:20)
+// person.printInfoInstance()
+// Person.printInfoStatic()
+// var student = Student(name:"Chorn Thoen",age:20,school: "Royal University of Phnom Penh",year: 4)
+
+// student.printInfo() //Name: Chorn Thoen, Age: 20, School: Royal University of Phnom Penh
+
+// student.printInfoBase() //Name: Chorn Thoen, Age: 20, School: Royal University of Phnom Penh year: 4
+
+
+//--------------------------------------------------------------
 //getter and setter
 class SupperClass{
     var numeber: Int = 0
@@ -75,6 +88,12 @@ class SubClass: SupperClass{
     
 }
 
+//getter and setter
+// var subClass = SubClass()
+// subClass.printInfo() //Name: Thoen, Number: 10
+
+
+//--------------------------------------------------------------
 //property observer willSet and didSet
 class TempClass{
     var num: Int = 5 {
@@ -87,6 +106,11 @@ class TempClass{
     }
 }
 
+// var tempClass = TempClass()
+// tempClass.num = 10
+
+
+//--------------------------------------------------------------
 //failible initializer
 class FailibelClass{
     var num: Int
@@ -99,6 +123,14 @@ class FailibelClass{
 
 }
 
+// var failibelClass = FailibelClass(num: 1)
+// if let failibelClass = failibelClass{
+//     print("The number is \(failibelClass.num)")
+// }else{
+//     print("The number is nil")
+// }
+
+//-------------------------------------------------------------------
 //required initializer
 class RequiredClass{
     var num: Int
@@ -119,38 +151,21 @@ class SubRequired : RequiredClass{
     }
 }
 
-var subRequired = SubRequired(num: 10)
-print(subRequired.name) //Thoen
+// var subRequired = SubRequired(num: 10)
+// print(subRequired.name) //Thoen
 
 
+//--------------------------------------------------------------
 
-// var failibelClass = FailibelClass(num: 1)
-// if let failibelClass = failibelClass{
-//     print("The number is \(failibelClass.num)")
-// }else{
-//     print("The number is nil")
-// }
+class MyClasses{
+    var myFeild: Int = {
+        return 10
+    }()
+    
+}
 
-//willSet and didSet
-// var tempClass = TempClass()
-// tempClass.num = 10
+var myClasses = MyClasses()
+print(myClasses.myFeild) //10
 
-//getter and setter
-// var subClass = SubClass()
-// subClass.printInfo() //Name: Thoen, Number: 10
-
-
-
-
-
-//inheritance
-// var person = Person(name:"Chorn Thoen",age:20)
-// person.printInfoInstance()
-// Person.printInfoStatic()
-// var student = Student(name:"Chorn Thoen",age:20,school: "Royal University of Phnom Penh",year: 4)
-
-// student.printInfo() //Name: Chorn Thoen, Age: 20, School: Royal University of Phnom Penh
-
-// student.printInfoBase() //Name: Chorn Thoen, Age: 20, School: Royal University of Phnom Penh year: 4
-
+//--------------------------------------------------------------
 

@@ -14,7 +14,7 @@ if isStudent{
 if highOne < highTwo {
     print("This is high one")
 } else{
-    print("This is high two")    
+    print("This is high two")
 }
 
 
